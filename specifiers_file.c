@@ -7,18 +7,18 @@
 int (*the_specifier(char *s))(va_list ptr, p_t *the_parameters)
 {
 	s_t specifier_format[] = {
+		{"c", char_function},
 		{"d", integer_function},
 		{"i", integer_function},
 		{"s", string_function},
-		{"c", char_function},
 		{"%", percent_function},
-		{"S", S_function},
 		{"b", convert_to_binary},
 		{"o", convert_to_oct},
 		{"u", unsigned_numbers},
 		{"x", convert_to_hex},
 		{"X", convert_to_HEX},
 		{"p", add},
+		{"S", S_function},
 		{"r", reverse},
 		{"R", rot_13},
 		{NULL, NULL}

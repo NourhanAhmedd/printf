@@ -36,7 +36,7 @@ int str_len(char *slen)
 int value(char *str, p_t *the_parameters)
 {
 	unsigned int index = str_len(str);
-	int negative = (!the_parameters->unsigned_numbers && *str == '-');
+	int negative = (!the_parameters->unsigned_n && *str == '-');
 
 	if (!the_parameters->precision_specifier && *str == '0' && !str[1])
 		str = "";
@@ -72,7 +72,7 @@ int r_s(char *str, p_t *the_parameters)
 
 	if (the_parameters->0_character && !the_parameters->minus_character)
 		padding = '0';
-	n1 = n2 = (!the_parameters->unsigned_numbers && *str == '-');
+	n1 = n2 = (!the_parameters->unsigned_n && *str == '-');
 	if (n1 && index < the_parameters->width_specifier && padding == '0' &&
 			!the_parameters->minus_character)
 		str++;
@@ -84,20 +84,20 @@ int r_s(char *str, p_t *the_parameters)
 	if (n1 && padding == '0')
 		m = m + _putchar('-');
 	if (the_parameters->plus_character && !n2 && padding == '0' &&
-			!the_parameters->unsigned_numbers)
+			!the_parameters->unsigned_n)
 		m = m + _putchar('+');
 	else if (!the_parameters->plus_character && the_parameters->space_character &&
-			!n2 && !the_parameters->unsigned_numbers && the_parameters->0_character)
+			!n2 && !the_parameters->unsigned_n && the_parameters->0_character)
 		m = m + _putchar(' ');
 	while (index++ < the_parameters->width_specifier)
 		m = m + _putchar(padding);
 	if (n1 && padding == ' ')
 		m = m + _putchar('-');
 	if (the_parameters->plus_character && !n2 && padding == ' ' &&
-			!the_parameters->unsigned_numbers)
+			!the_parameters->unsigned_n)
 		m = m + _putchar('+');
 	else if (!the_parameters->plus_character && the_parameters->space_character &&
-			!n2 && !the_parameters->unsigned_numbers && !the_parameters->0_character)
+			!n2 && !the_parameters->unsigned_n && !the_parameters->0_character)
 		m = m + _putchar(' ');
 	m = m + _puts(str);
 	return (m);
@@ -119,17 +119,17 @@ int l_s(char *str, p_t *the_parameters)
 
 	if (the_parameters->0_character && !the_parameters->minus_character)
 		padding = '0';
-	n1 = n2 = (!the_parameters->unsigned_numbers && *str == '-');
+	n1 = n2 = (!the_parameters->unsigned_n && *str == '-');
 	if (n1 && index < the_parameters->width_specifier && padding == '0' &&
 			!the_parameters->minus_character)
 		str++;
 	else
 		n1 = 0;
 	if (the_parameters->plus_character && !n2 &&
-			!the_parameters->unsigned_numbers)
+			!the_parameters->unsigned_n)
 		m = m + _putchar('+'), index++;
 	else if (the_parameters->space_character && !n2 &&
-			!the_parameters->unsigned_numbers)
+			!the_parameters->unsigned_n)
 		m = m + _putchar(' '), index++;
 	m = m + _puts(str);
 	while (index++ < the_parameters->width_specifier)

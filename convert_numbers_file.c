@@ -30,7 +30,7 @@ int convert_to_hex(va_list ptr, p_t *the_parameters)
 		*--s = 'x';
 		*--s = '0';
 	}
-	the_parameters->unsigned_numbers = 1;
+	the_parameters->unsigned_n = 1;
 	return (i = i + value(s, the_parameters));
 }
 
@@ -65,7 +65,7 @@ int convert_to_HEX(va_list ptr, p_t *the_parameters)
 		*--s = 'x';
 		*--s = '0';
 	}
-	the_parameters->unsigned_numbers = 1;
+	the_parameters->unsigned_n = 1;
 	return (i = i + value(s, the_parameters));
 }
 
@@ -86,7 +86,7 @@ int convert_to_binary(va_list ptr, p_t *the_parameters)
 	{
 		*--s = '0';
 	}
-	the_parameters->unsigned_numbers = 1;
+	the_parameters->unsigned_n = 1;
 	return (i = i + value(s, the_parameters));
 }
 
@@ -120,6 +120,6 @@ int convert_to_oct(va_list ptr, p_t *the_parameters)
 	{
 		*--s = '0';
 	}
-	the_parameters->unsigned_numbers = 1;
+	the_parameters->unsigned_n = 1;
 	return (i = i + value(s, the_parameters));
 }

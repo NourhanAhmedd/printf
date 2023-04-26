@@ -62,7 +62,7 @@ int unsigned_numbers(va_list ptr, p_t *the_parameters)
 	{
 		n = (unsigned int)va_arg(ptr, unsigned int);
 	}
-	the_parameters->unsigned_numbers = 1;
+	the_parameters->unsigned_n = 1;
 	return (value(c(1, 10, UNSIGNED_C, the_parameters), the_parameters));
 }
 

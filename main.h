@@ -1,5 +1,5 @@
-#ifndef MAIN_PRINTF_H
-#define MAIN_PRINTF_H
+#ifndef PRINTF_H
+#define PRINTF_H
 /* The libraries: */
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@
 /* The first struct:  */
 /**
  * struct p_v - struct p_v.
- * @unsigned_numbers: The unsigned numbers.
+ * @unsigned_n: The unsigned numbers.
  * @width_specifier: The field width for non-custom conversion specifiers.
  * @precision_specifier: The precision for non-custom conversion specifiers.
  * @plus_character: The (+) flag for non-custom conversion specifiers.
@@ -30,18 +30,18 @@
 */
 typedef struct p_v
 {
-	unsigned int unsigned_numbers : 1;
+	unsigned int unsigned_n		: 1;
 	unsigned int width_specifier;
 	unsigned int precision_specifier;
-	unsigned int plus_character : 1;
-	unsigned int space_character : 1;
-	unsigned int hash_character : 1;
+	unsigned int plus_character	: 1;
+	unsigned int space_character	: 1;
+	unsigned int hash_character	: 1;
 
-	unsigned int l_length_modifier : 1;
-	unsigned int h_length_modifier : 1;
+	unsigned int l_length_modifier	: 1;
+	unsigned int h_length_modifier	: 1;
 
-	unsigned int 0_character : 1;
-	unsigned int minus_character : 1;
+	unsigned int 0_character	: 1;
+	unsigned int minus_character	: 1;
 } p_t;
 
 /* The second struct:  */
@@ -95,4 +95,4 @@ int _printf(const char *format, ...);
 char *prec(char *pr, p_t *the_parameters, va_list ptr);
 void parameter_function(p_t *the_parameters, va_list ptr);
 
-#endif /* MAIN_PRINTF_H */
+#endif /* PRINTF_H */

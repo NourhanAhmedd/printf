@@ -67,6 +67,7 @@ int rot_13(va_list ptr, p_t *the_parameters)
 	(void)the_parameters;
 
 	j = 0;
+	n = 0;
 	ct = 0;
 	while (s[n])
 	{

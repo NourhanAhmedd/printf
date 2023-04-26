@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	int result = 0;
-	va_list *ptr;
+	va_list ptr;
 	char *s;
 	char *p1;
 	p_t parameters = PARAMETERS_VALUE;
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		p1 = prec(p1, &parameters, ptr);
 		if (the_modifier(p1, &parameters))
 			p1++;
-		if (!the_specifier(p))
+		if (!the_specifier(p1))
 		{
 			result = result + length(s, p1, parameters.l_length_modifier ||
 					parameters.h_length_modifier ? p1 - 1 : 0);

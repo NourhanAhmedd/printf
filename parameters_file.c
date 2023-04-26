@@ -16,7 +16,7 @@ void parameter_function(p_t *the_parameters, va_list ptr)
 	the_parameters->l_length_modifier = 0;
 	the_parameters->h_length_modifier = 0;
 
-	the_parameters->0_character = 0;
+	the_parameters->z_character = 0;
 	the_parameters->minus_character = 0;
 	(void)ptr;
 }

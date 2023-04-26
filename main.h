@@ -25,7 +25,7 @@
  * @hash_character: The (#) flag for non-custom conversion specifiers.
  * @l_length_modifier: The first length modifier.
  * @h_length_modifier: The second length modifier.
- * @0_character: The (0) flag character for non-custom conversion specifiers.
+ * @z_character: The (0) flag character for non-custom conversion specifiers.
  * @minus_character: The (-) flag for non-custom conversion specifiers.
 */
 typedef struct p_v
@@ -40,7 +40,7 @@ typedef struct p_v
 	unsigned int l_length_modifier	: 1;
 	unsigned int h_length_modifier	: 1;
 
-	unsigned int 0_character	: 1;
+	unsigned int z_character	: 1;
 	unsigned int minus_character	: 1;
 } p_t;
 

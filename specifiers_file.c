@@ -77,7 +77,7 @@ int flag_character(char *s, p_t *the_parameters)
 			index = the_parameters->hash_character = 1;
 			break;
 		case '0':
-			index = the_parameters->0_character = 1;
+			index = the_parameters->z_character = 1;
 			break;
 		case '-':
 			index = the_parameters->minus_character = 1;

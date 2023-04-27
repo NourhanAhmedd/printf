@@ -62,8 +62,8 @@ int rot_13(va_list ptr, p_t *the_parameters)
 	int ct;
 	int n;
 	int j;
-	char Array[] =
-		"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
+	char ar[] =
+		"NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 	char *s = va_arg(ptr, char *);
 	(void)the_parameters;
 
@@ -76,12 +76,10 @@ int rot_13(va_list ptr, p_t *the_parameters)
 				|| (s[n] >= 'a' && s[n] <= 'z'))
 		{
 			j = s[n] - 65;
-			ct = ct + _putchar(Array[j]);
+			ct += _putchar(ar[j]);
 		}
 		else
-		{
-			ct = ct + _putchar(s[n]);
-		}
+			ct += _putchar(s[n]);
 		n++;
 	}
 	return (ct);

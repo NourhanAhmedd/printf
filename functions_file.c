@@ -52,7 +52,7 @@ int integer_function(va_list ptr, p_t *the_parameters)
 	{
 		n = (int)va_arg(ptr, int);
 	}
-	return (value(c(1, 10, 0, the_parameters), the_parameters));
+	return (value(c(n, 10, 0, the_parameters), the_parameters));
 }
 
 /**

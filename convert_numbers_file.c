@@ -24,7 +24,7 @@ int convert_to_hex(va_list ptr, p_t *the_parameters)
 	{
 		n = (unsigned int)va_arg(ptr, unsigned int);
 	}
-	s = c(1, 16, UNSIGNED_C | LOWERCASE_C, the_parameters);
+	s = c(n, 16, UNSIGNED_C | LOWERCASE_C, the_parameters);
 	if (the_parameters->hash_character && n)
 	{
 		*--s = 'x';
@@ -59,10 +59,10 @@ int convert_to_HEX(va_list ptr, p_t *the_parameters)
 	{
 		n = (unsigned int)va_arg(ptr, unsigned int);
 	}
-	s = c(1, 16, UNSIGNED_C, the_parameters);
+	s = c(n, 16, UNSIGNED_C, the_parameters);
 	if (the_parameters->hash_character && n)
 	{
-		*--s = 'x';
+		*--s = 'X';
 		*--s = '0';
 	}
 	the_parameters->unsigned_n = 1;
@@ -115,7 +115,7 @@ int convert_to_oct(va_list ptr, p_t *the_parameters)
 	{
 		n = (unsigned int)va_arg(ptr, unsigned int);
 	}
-	s = c(1, 8, UNSIGNED_C, the_parameters);
+	s = c(n, 8, UNSIGNED_C, the_parameters);
 	if (the_parameters->hash_character && n)
 	{
 		*--s = '0';

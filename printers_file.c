@@ -63,7 +63,7 @@ int rot_13(va_list ptr, p_t *the_parameters)
 	int n;
 	int j;
 	char Array[] =
-		"NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm";
+		"NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 	char *s = va_arg(ptr, char *);
 	(void)the_parameters;
 
